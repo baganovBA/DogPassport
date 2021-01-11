@@ -15,16 +15,16 @@ function App() {
      <Route path='/registration'> 
         <Registration />
      </Route>
-     <Route path='/'> 
+     <Route path='/'exact> 
         <LogIn />
      </Route>
-     <Route path='/User/:id'> 
+     <Route path='/User'> 
         <User />
      </Route>
-     <Route path='/newPet'> 
+     <Route path='/NewPet'> 
         <NewPet />
      </Route>
-     <Route path='/PetCard'> 
+     <Route path='/PetCard/:id'> 
         <PetCard />
      </Route>
      </div>
