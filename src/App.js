@@ -6,6 +6,7 @@ import Registration from './Registration/registration';
 import User from './User/User';
 import NewPet from './NewPet/NewPet';
 import PetCard from './PetCard/PetCard';
+import PetSettings from './PetSettings/PetSettings';
 
 function App() {
   return (
@@ -21,11 +22,11 @@ function App() {
      <Route path='/User'> 
         <User />
      </Route>
-     <Route path='/NewPet'> 
-        <NewPet />
+     <Route path='/NewPet' component={NewPet} exact> 
      </Route>
-     <Route path='/PetCard/:id'> 
-        <PetCard />
+     <Route path='/PetCard/:id' component={PetCard} exact> 
+     </Route>
+     <Route path='/PetSettings/:id' component={PetSettings} exact> 
      </Route>
      </div>
     </div>

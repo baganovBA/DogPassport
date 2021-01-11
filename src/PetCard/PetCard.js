@@ -11,17 +11,17 @@ class PetCard extends React.Component{
 
     getVaccination(){
         console.log(this.props)
-        fetch(`http://localhost:5000/vaccination/1`)
+        fetch(`http://localhost:5000/pet/${this.props.match.params.id}`)
         .then(promise => promise.json())
-        .then(data => this.setState({vaccination:[...data]}, ()=>{console.log(this.state)} ))
+        .then(data => this.setState({...data}, ()=>{console.log(this.state)} ))
 
     }
     render(){
         return(
             <div className='container'>
                 <header className='header'>
-                    <h2>"Кличка питомца"</h2>
-                    <Link to='/PetSettings'>
+                    <h2>{this.state.name}</h2>
+                    <Link to={`/PetSettings/${this.props.match.params.id}`}>
                         <img className='settings' 
                              src='https://e7.pngegg.com/pngimages/257/93/png-clipart-settings-gear-icon-gear-configuration.png'
                              alt='Settings' />

@@ -1,24 +1,44 @@
 import React from 'react'
 
 class NewPet extends React.Component{
+    state={}
+
+    onChangeHandler = (event)=>{
+        var inputName = event.target.name;
+        var inputValue = event.target.value;
+        this.setState({[inputName]:inputValue})
+    }
+
+    clickHandler = (event)=>{
+        event.preventDefault()
+        console.log(this.state)
+        fetch('http://localhost:5000/pet',{
+                method: "POST",
+                headers:{
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(this.state)
+        })
+
+
+    }
+
     render(){
         return(
             <div>
                 <form>
                     <h3>Новый питомец</h3>
                     <p>Кличка</p>
-                    <input name='name' />
+                    <input value={this.state.name} onChange={this.onChangeHandler} name='name' />
                     <p>Порода</p>
-                    <input name='breed' />
+                    <input value={this.state.breed} onChange={this.onChangeHandler} name='breed' />
                     <p>Дата Рождения</p>
-                    <input name='birthday date' />
+                    <input value={this.state.birthday} onChange={this.onChangeHandler} name='birthday' type='date' />
                     <p>Масса</p>
-                    <input name='weight' />
+                    <input value={this.state.weight} onChange={this.onChangeHandler} name='weight' type='number' />
                     <p>Номер Чипа</p>
-                    <input name='chip' />
-                    <p>Номер Татуировки</p>
-                    <input name='tatoo' />
-                    <button>Добавить питомца</button>
+                    <input value={this.state.chip} onChange={this.onChangeHandler} name='chip' />
+                    <button onClick = {this.clickHandler}>Добавить питомца</button>
                 </form>
             </div>
         )

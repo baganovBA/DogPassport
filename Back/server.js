@@ -1,5 +1,7 @@
 const express = require('express')
 const app = express()
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
 
 app.use(function (req, res, next) {
     res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
@@ -29,18 +31,32 @@ let pets = [
         weight:'2',
         birthday:'',
         vaccination:[
-            {  id:'',
-                disease:'',
-               date:"",
-               newDate:''
+            {  id:'1',
+                disease:'Клещ',
+               date:"11/10/2020",
+               newDate:'11/12/2020'
             }
         ]
     }
 ]
 
+let petId = 3
 
 app.get('/user',(req,res)=>{
     res.status(200).json(pets)
+})
+
+app.get('/pet/:id', (req,res)=>{
+    let findPet = pets.filter((pet) => pet.id === parseInt(req.params.id))
+    findPet = findPet[0]
+    res.json(findPet)
+})
+
+app.post('/pet', (req,res)=>{
+    pets.push({id:petId, ...req.body})
+    petId++
+    res.json(req.body)
+
 })
 
 app.get('/vaccination/:id', (req,res)=>{
