@@ -31,8 +31,14 @@ class PetCard extends React.Component{
                 this.state.vaccination.map((vaccination)=>{
                     return <div className='vaccination'>
                         <p>{vaccination.disease}</p>
-                        <p>{vaccination.date}</p>
                         <p>{vaccination.newDate}</p>
+                        {/* <input className='vaccination_name' value = {vaccination.disease} ></input>
+                        <input className='vaccination_date' value = {vaccination.date} ></input>
+                        <input className='vaccination_newDate' value={vaccination.newDate}></input>
+                        <button className='vaccination_change'>Редактировать</button>
+                        <button className='vaccination_save'>Сохранить</button>
+                        <button className='vaccination_delete'>Delete</button> */}
+
                     </div>
                 } )}
                 

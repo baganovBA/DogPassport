@@ -22,6 +22,11 @@ let pets = [
                 disease:'Бешенство',
                date:"11/01/2020",
                newDate:'11/01/2021'
+            },
+            {  id:'2',
+                disease:'Клещ',
+               date:"11/01/2020",
+               newDate:'11/01/2021'
             }
         ]
     },
@@ -33,6 +38,11 @@ let pets = [
         vaccination:[
             {  id:'1',
                 disease:'Клещ',
+               date:"11/10/2020",
+               newDate:'11/12/2020'
+            },
+            {  id:'2',
+                disease:'Хвощ',
                date:"11/10/2020",
                newDate:'11/12/2020'
             }
@@ -52,8 +62,26 @@ app.get('/pet/:id', (req,res)=>{
     res.json(findPet)
 })
 
+app.put('/pet/:id', (req,res)=>{
+    let petId = pets.findIndex((pet)=> pet.id === parseInt(req.params.id))
+    const oldPet = pets[petId]
+    pets[petId] = {...oldPet, ...req.body}
+    res.json(pets[petId])
+
+})
+
 app.post('/pet', (req,res)=>{
-    pets.push({id:petId, ...req.body})
+    pets.push({id:petId, ...req.body, vaccination:[
+        {  id:'1',
+            disease:'Прививка от бешенства',
+           date:"2020/12/12",
+           newDate:''
+        },
+        {  id:'2',
+            disease:'Обработка от клеща',
+           date:"",
+           newDate:''
+        },]})
     petId++
     res.json(req.body)
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 class NewPet extends React.Component{
     state={}
@@ -10,7 +11,7 @@ class NewPet extends React.Component{
     }
 
     clickHandler = (event)=>{
-        event.preventDefault()
+        // event.preventDefault()
         console.log(this.state)
         fetch('http://localhost:5000/pet',{
                 method: "POST",
@@ -38,7 +39,9 @@ class NewPet extends React.Component{
                     <input value={this.state.weight} onChange={this.onChangeHandler} name='weight' type='number' />
                     <p>Номер Чипа</p>
                     <input value={this.state.chip} onChange={this.onChangeHandler} name='chip' />
+                    <Link to ='/User'>
                     <button onClick = {this.clickHandler}>Добавить питомца</button>
+                    </Link>
                 </form>
             </div>
         )

@@ -8,6 +8,9 @@ class User extends React.Component{
     componentDidMount(){
         this.getPets()
     }
+    // componentWillMount(){
+    //     this.getPets()
+    // }
     getPets(){
         fetch('http://localhost:5000/user')
         .then(promise => promise.json())
