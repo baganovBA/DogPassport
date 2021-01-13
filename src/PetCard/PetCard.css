@@ -1,23 +1,43 @@
-.container{
-    width: 60vw;
+.PetCard_container{
+    width: 90%;
     margin: auto;
-    border: solid 1px gray;
+    /* border: solid 1px gray; */
 }
 
 
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.PetCard_header{
+    /* border: solid 1px gray; */
+    height: 90px;
+    border-radius: 16px;
+    background: #F5F5FA;
+    box-shadow: -5px -5px 10px
+     rgba(255, 255, 255, 0.5),
+     5px 5px 10px 
+    rgba(170, 170, 204, 0.25),
+     10px 10px 20px
+     rgba(170, 170, 204, 0.5),
+     -10px -10px 20px #FFFFFF;
+    position: relative;
+    margin-bottom: 10px;
 }
 
-.settings{
-    width: 40px;
-    /* height: 50px; */
-}
-
-.vaccination{
+.PetCard_vaccination{
     border:solid, 1px, gray;
 }
+.PetCard_img_header{
+    width: 88px;
+    height: 88px;
 
+}
+.addForm{
+    border:solid 1px gray;
+
+}
+
+.show{
+    display: block;
+}
+
+.no-show{
+    display: none;
+}

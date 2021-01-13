@@ -1,0 +1,40 @@
+.PetLink_petCard{
+    border: solid 1px gray;
+    height: 135px;
+    border-radius: 16px;
+    background: #F5F5FA;
+    box-shadow: -5px -5px 10px
+     rgba(255, 255, 255, 0.5),
+     5px 5px 10px 
+    rgba(170, 170, 204, 0.25),
+     10px 10px 20px
+     rgba(170, 170, 204, 0.5),
+     -10px -10px 20px #FFFFFF;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.PetLink_name{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    left:180px;
+    top:20px;
+    color: #7878AB;
+    /* margin-left: 150px; */
+}
+
+.PetLink_breed{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    position: absolute;
+    left:180px;
+    top:60px;
+    color: #7878AB;
+    /* margin-left: 150px; */
+}

@@ -12,42 +12,42 @@ app.use(function (req, res, next) {
 });
 
 let pets = [
-    {   id:1,
-        name:"sharik",
-        breed:'malinua',
-        weight:'2',
-        birthday:'',
-        vaccination:[
-            {  id:'1',
-                disease:'Бешенство',
-               date:"11/01/2020",
-               newDate:'11/01/2021'
-            },
-            {  id:'2',
-                disease:'Клещ',
-               date:"11/01/2020",
-               newDate:'11/01/2021'
-            }
-        ]
-    },
-    {   id:2,
-        name:"bobik",
-        breed:'malinua',
-        weight:'2',
-        birthday:'',
-        vaccination:[
-            {  id:'1',
-                disease:'Клещ',
-               date:"11/10/2020",
-               newDate:'11/12/2020'
-            },
-            {  id:'2',
-                disease:'Хвощ',
-               date:"11/10/2020",
-               newDate:'11/12/2020'
-            }
-        ]
-    }
+    // {   id:1,
+    //     name:"sharik",
+    //     breed:'malinua',
+    //     weight:'2',
+    //     birthday:'',
+    //     vaccination:[
+    //         // {  id:'1',
+    //         //     disease:'Бешенство',
+    //         //    date:"11/01/2020",
+    //         //    newDate:'11/01/2021'
+    //         // },
+    //         // {  id:'2',
+    //         //     disease:'Клещ',
+    //         //    date:"11/01/2020",
+    //         //    newDate:'11/01/2021'
+    //         // }
+    //     ]
+    // },
+    // {   id:2,
+    //     name:"bobik",
+    //     breed:'malinua',
+    //     weight:'2',
+    //     birthday:'',
+    //     vaccination:[
+    //         // {  id:'1',
+    //         //     disease:'Клещ',
+    //         //    date:"11/10/2020",
+    //         //    newDate:'11/12/2020'
+    //         // },
+    //         // {  id:'2',
+    //         //     disease:'Хвощ',
+    //         //    date:"11/10/2020",
+    //         //    newDate:'11/12/2020'
+    //         // }
+    //     ]
+    // }
 ]
 
 let petId = 3
@@ -71,19 +71,17 @@ app.put('/pet/:id', (req,res)=>{
 })
 
 app.post('/pet', (req,res)=>{
-    pets.push({id:petId, ...req.body, vaccination:[
-        {  id:'1',
-            disease:'Прививка от бешенства',
-           date:"2020/12/12",
-           newDate:''
-        },
-        {  id:'2',
-            disease:'Обработка от клеща',
-           date:"",
-           newDate:''
-        },]})
+    pets.push({id:petId, ...req.body, vaccination:[]})
     petId++
     res.json(req.body)
+
+})
+
+app.post('/vaccination/:id', (req,res)=>{
+    let petId = pets.findIndex((pet)=> pet.id === parseInt(req.params.id))
+    pets[petId].vaccination.push(req.body)
+    console.log(pets[petId])
+    res.json(pets[petId])
 
 })
 

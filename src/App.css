@@ -1,25 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 .App {
-  text-align: center;
-  width: 100%;
+  font-family: 'Lato', sans-serif;
+  /* text-align: center; */
+  width: 375px;
+  border:solid 1px gray;
+  margin:0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App_header{
+  position: relative;
+  margin-top:0px;
+  height: 80px;
+  background-color: #F5F5FA;
+  border-radius: 0px 0px 16px 16px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px #FFFFFF;
+}
+
+.App_header_title{
+  margin-left: 150px;
+  margin-top: 20px;
+  display:inline-block;
+  /* position: relative;
+  height: 41px;
+  left: 27px; */
+  /* font-family: 'Lato', sans-serif; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  /* line-height: 65px; */
+  color: #5533EA;
+}
+
+.App_logo_dog{
+  display: flex;
+  position: absolute;
+  right: 5vw;
+  top: 5vh;
 }
 
 .route{
-  width: max-content;
+  width: 100%;
   margin:auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -32,13 +58,11 @@
 
 .App-link {
   color: #61dafb;
-}
+} */
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

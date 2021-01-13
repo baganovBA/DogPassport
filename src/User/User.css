@@ -1,0 +1,34 @@
+
+.User_block{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.User_link_petcard{
+    margin-bottom: 25px;
+}
+
+.User_title{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.User_add_button{
+   margin: 0 auto;
+   outline: none !important;
+   border:none;
+
+}
+
+.User_link_add_button{
+    margin-left: 40%;
+    border:none;
+}
+
+.User_add_button_img{
+    width: 65px;
+    height: 65px;
+}
