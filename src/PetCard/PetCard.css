@@ -18,19 +18,137 @@
      rgba(170, 170, 204, 0.5),
      -10px -10px 20px #FFFFFF;
     position: relative;
+    margin-top: 15px;
     margin-bottom: 10px;
 }
 
-.PetCard_vaccination{
-    border:solid, 1px, gray;
-}
 .PetCard_img_header{
     width: 88px;
     height: 88px;
-
 }
-.addForm{
+
+.PetCard_name{
+    position: absolute;
+    left:150px;
+    top: 15px;
+}
+
+.PetCard_vaccination{
+    margin: auto;
+    border:solid, 1px, gray;
+    height: 80px;
+    width: 80%;
+    border-radius: 16px;
+    background: #F5F5FA;
+    box-shadow: -5px -5px 10px
+     rgba(255, 255, 255, 0.5),
+     5px 5px 10px 
+    rgba(170, 170, 204, 0.25),
+     10px 10px 20px
+     rgba(170, 170, 204, 0.5),
+     -10px -10px 20px #FFFFFF;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 7px;
+}
+
+.PetCard_disease{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+.PetCard_newDate{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;   
+    color: #979797;
+}
+.PetCard_addForm{
     border:solid 1px gray;
+    margin: auto;
+    height: auto;
+    width: 80%;
+    border-radius: 16px;
+    background: #F5F5FA;
+    box-shadow: -5px -5px 10px
+     rgba(255, 255, 255, 0.5),
+     5px 5px 10px 
+    rgba(170, 170, 204, 0.25),
+     10px 10px 20px
+     rgba(170, 170, 204, 0.5),
+     -10px -10px 20px #FFFFFF;
+    position: relative;
+    text-align: center;
+    box-sizing: inherit;
+    
+}
+
+.PetCard_addForm_title{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333
+}
+.PetCard_addForm_text{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7878AB;
+}
+
+.PetCard_addForm_input{
+    border:solid 1px rgb(99, 40, 50);
+    border-radius: 5px;
+    height: 20px;
+    width: 65%;
+    /* background: rgb(185, 207, 171); */
+    text-align: center;
+}
+
+.PetCard_add_vaccination_button{
+    margin-left:110px;
+    outline: none !important;
+    border:none;
+    background:none;
+    cursor: pointer;
+}
+
+.PetCard_add_vaccination_img{
+    width: 100px;
+    height: 100px;
+}
+
+.PetCard_addForm_save_button{
+    margin: auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    width: 155px;
+    height: 34px;
+    background: #57419D;
+    box-shadow: -5px -5px 3px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px #FFFFFF;
+    border-radius: 32px;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
 
 }
 

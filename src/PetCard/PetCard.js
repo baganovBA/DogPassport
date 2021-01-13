@@ -1,6 +1,7 @@
 import React from 'react'
 import './PetCard.css'
 import dog_avatar from '../image/dog_avatar.png'
+import button from '../image/add_button.svg'
 import { Link } from 'react-router-dom'
 
 class PetCard extends React.Component{
@@ -38,7 +39,7 @@ class PetCard extends React.Component{
             body: JSON.stringify(this.state.sendData)
         })
 
-        this.setState({visible:false})
+        this.setState({visible:false , sendData:''})
     }
 
     getVaccination(){
@@ -49,18 +50,19 @@ class PetCard extends React.Component{
     }
     render(){
         console.log(this.props)
+        console.log(this.state)
         return(
             <div className='PetCard_container'>
                 <header className='PetCard_header'>
                 <img className='PetCard_img_header' src={dog_avatar} alt='dog_avatar'/>
-                    <h2>{this.state.name}</h2>
+                    <h2 className='PetCard_name'>{this.state.name}</h2>
                    
                 </header>
-                {this.state.vaccination && 
+                {this.state.vaccination && this.state.vaccination.length > 0 ? 
                 this.state.vaccination.map((vaccination)=>{
                     return <div className='PetCard_vaccination'>
-                        <p>{vaccination.disease}</p>
-                        <p>{vaccination.newDate}</p>
+                        <p className="PetCard_disease">{vaccination.disease}</p>
+                        <p className="PetCard_newDate">{vaccination.newDate}</p>
                         {/* <input className='vaccination_name' value = {vaccination.disease} ></input>
                         <input className='vaccination_date' value = {vaccination.date} ></input>
                         <input className='vaccination_newDate' value={vaccination.newDate}></input>
@@ -69,20 +71,20 @@ class PetCard extends React.Component{
                         <button className='vaccination_delete'>Delete</button> */}
 
                     </div>
-                } )}
+                }) : <p>Добавьте пункты ухода</p>}
 
-                <div className = {(this.state.visible ? "show " : 'no-show ' ) + 'addForm'} >
+                <div className = {(this.state.visible ? "show " : 'no-show ' ) + 'PetCard_addForm'} >
                     <form>
-                    <p>Название</p>
-                    <input value={this.state.sendData.disease} onChange={this.onChangeHandler}  name = 'disease'></input>
-                    <p>Дата обработки</p>
-                    <input value={this.state.sendData.date} onChange={this.onChangeHandler} name = 'date'></input>
-                    <p>Дата следующей обработки</p>
-                    <input value={this.state.sendData.newDate} onChange={this.onChangeHandler} name = 'newDate'></input>
-                    <button onClick={this.addVaccination}>Сохранить</button>
+                    <p className="PetCard_addForm_title">Название</p>
+                    <input className="PetCard_addForm_input" value={this.state.sendData.disease} onChange={this.onChangeHandler}  name = 'disease'></input>
+                    <p className="PetCard_addForm_text">Дата обработки</p>
+                    <input className="PetCard_addForm_input" type='date' value={this.state.sendData.date} onChange={this.onChangeHandler} name = 'date'></input>
+                    <p className="PetCard_addForm_text">Дата следующей обработки</p>
+                    <input className="PetCard_addForm_input" type='date' value={this.state.sendData.newDate} onChange={this.onChangeHandler} name = 'newDate'></input>
+                    <br/><button className="PetCard_addForm_save_button" onClick={this.addVaccination}>Сохранить</button>
                     </form>
                 </div>
-                <button onClick = {()=>{this.setState({visible:true})}}> Добавить </button>
+                <button className="PetCard_add_vaccination_button" onClick = {()=>{this.setState({visible:true})}}> <img className='PetCard_add_vaccination_img' src={button} alt="add_button"/></button>
 
                 
             </div>

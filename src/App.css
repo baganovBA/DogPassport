@@ -4,8 +4,9 @@
   font-family: 'Lato', sans-serif;
   /* text-align: center; */
   width: 375px;
-  border:solid 1px gray;
+  /* border:solid 1px gray; */
   margin:0 auto;
+  background: #F5F5FA;
 }
 
 .App_header{
@@ -18,7 +19,7 @@
 }
 
 .App_header_title{
-  margin-left: 150px;
+  margin-left: 50px;
   margin-top: 20px;
   display:inline-block;
   /* position: relative;
@@ -35,8 +36,8 @@
 .App_logo_dog{
   display: flex;
   position: absolute;
-  right: 5vw;
-  top: 5vh;
+  right: 5%;
+  top: 25%;
 }
 
 .route{

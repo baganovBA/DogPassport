@@ -1,0 +1,70 @@
+.NewPet_conteiner{
+    margin: 0 auto;
+    width: 90%;
+    border-radius: 16px;
+    background: #F5F5FA;
+    box-shadow: -5px -5px 10px
+     rgba(255, 255, 255, 0.5),
+     5px 5px 10px 
+    rgba(170, 170, 204, 0.25),
+     10px 10px 20px
+     rgba(170, 170, 204, 0.5),
+     -10px -10px 20px #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.NewPet_input{
+    width: 60%;
+    margin: 0 auto;
+    border:solid 1px rgb(99, 40, 50);
+    border-radius: 5px;
+    height: 20px;
+    width: 65%;
+    text-align: center;
+}
+
+.NewPet_text{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7878AB;
+}
+
+.NewPet_name{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333
+}
+
+.NewPet_button{
+    margin: auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    width: 155px;
+    height: 34px;
+    background: #57419D;
+    box-shadow: -5px -5px 3px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5), -10px -10px 20px #FFFFFF;
+    border-radius: 32px;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    /* font-weight: bold; */
+    font-size: 14px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}

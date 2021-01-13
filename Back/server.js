@@ -73,7 +73,7 @@ app.put('/pet/:id', (req,res)=>{
 app.post('/pet', (req,res)=>{
     pets.push({id:petId, ...req.body, vaccination:[]})
     petId++
-    res.json(req.body)
+    res.status(200).send()
 
 })
 

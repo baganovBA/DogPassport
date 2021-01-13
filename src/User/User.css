@@ -20,15 +20,16 @@
    margin: 0 auto;
    outline: none !important;
    border:none;
+   background:none;
 
 }
 
 .User_link_add_button{
-    margin-left: 40%;
+    margin-left: 35%;
     border:none;
 }
 
 .User_add_button_img{
-    width: 65px;
-    height: 65px;
+    width: 90px;
+    height: 90px;
 }
